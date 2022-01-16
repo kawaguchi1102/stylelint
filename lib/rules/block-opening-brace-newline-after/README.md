@@ -123,3 +123,28 @@ a { color: pink; }
 a {color: pink;
 }
 ```
+
+## Optional secondary options
+
+`ignore: ["rules"]`
+
+Ignore the rules when using single lines.
+
+For example, with "always":
+
+The following patterns are considered problems:
+
+<!-- prettier-ignore -->
+```css
+.container { padding: 0; margin: 5px }
+@media (min-width: 992px) {.container { padding: 5px; margin: 0 }}
+```
+
+The following patterns are _not_ considered problems:
+
+<!-- prettier-ignore -->
+```css
+.container { padding: 0; margin: 5px }
+@media (min-width: 992px) {
+  .container { padding: 5px; margin: 0 }}
+```
