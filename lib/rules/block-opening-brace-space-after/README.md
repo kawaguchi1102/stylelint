@@ -172,3 +172,27 @@ a { color: pink; }
 a {color: pink;
 }
 ```
+
+## Optional secondary options
+
+`ignore: ["at-rules"]`
+
+Ignore the rules when using single lines.
+
+For example, with "always":
+
+The following patterns are considered problems:
+
+<!-- prettier-ignore -->
+```css
+@media print { a {
+  color: pink; } }
+```
+
+The following patterns are _not_ considered problems:
+
+<!-- prettier-ignore -->
+```css
+@media print {
+  a { color: pink; } }
+```
